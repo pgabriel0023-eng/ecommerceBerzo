@@ -8,7 +8,7 @@ export function Catalogo() {
   useEffect(() => {
     const url = 'http://localhost:3000/berzo/produtos/';
 
-    fetch(url)
+    fetch('https://ecommerceberzo.onrender.com/berzo/produtos/')
       .then((resposta) => resposta.json())
       .then((dados) => {
         setProdutos(dados);
