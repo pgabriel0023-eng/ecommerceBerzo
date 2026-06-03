@@ -10,7 +10,7 @@ export function Details() {
 
   useEffect(() => {
     console.log('O ID capturado da URL é:', id);
-    fetch(`http://localhost:3000/berzo/produtos/produto/${id}`)
+    fetch(`https://ecommerceberzo.onrender.com/berzo/produtos/produto/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error('Produto não encontrado');
         return res.json();
