@@ -12,7 +12,8 @@ export function Header() {
   const handleSearch = (e) => {
     e.preventDefault();
     if (busca.trim() !== '') {
-      console.log('Usuário está buscando por: ', busca);
+      Navigate(`/?search=${encodeURIComponente(busca.trim())}`);
+      setBusca('');
     }
   };
 
@@ -24,24 +25,7 @@ export function Header() {
             <img src={logo} alt='logo berzo' className={styles.imgLogo} />
           </Link>
 
-          <form onSubmit={handleSearch}>
-            <input
-              type='text'
-              placeholder='O que está buscando hoje?'
-              value={busca}
-              onChange={(e) => setBusca(e.target.value)}
-              className={styles.searchInput}
-            />
-            <button type='submit' className={styles.searchBtn}>
-              <FiSearch size={20} />
-            </button>
-          </form>
-
-          <UserButtons />
-        </div>
-
-        <div className={styles.navBar}>
-          <nav>
+          <nav className={styles.navBar}>
             <ul>
               <li>
                 <Link to='/camiseta'>Camiseta</Link>
@@ -54,6 +38,8 @@ export function Header() {
               </li>
             </ul>
           </nav>
+
+          <UserButtons />
         </div>
       </div>
     </header>

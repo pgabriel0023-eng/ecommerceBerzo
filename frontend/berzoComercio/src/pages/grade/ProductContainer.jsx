@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ProductCard } from '../card/ProductCard';
+import { ProductCard } from '../../components/card/ProductCard';
+import { Link } from 'react-router-dom';
 import styles from './ProductContainer.module.scss';
 
 export function Catalogo() {
   //trazendo o backend
   const [produtos, setProdutos] = useState([]);
+
   useEffect(() => {
     const url = 'http://localhost:3000/berzo/produtos/';
 
@@ -22,6 +24,7 @@ export function Catalogo() {
       {produtos.map((produto) => (
         <ProductCard
           key={produto.id}
+          id={produto.id}
           imagem={produto.imagem}
           marca={produto.marca}
           nome={produto.nome}

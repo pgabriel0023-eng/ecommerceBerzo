@@ -1,7 +1,7 @@
 import React from 'react';
 import baner from '../../assets/banerHome.jpg';
 import skate from '../../assets/skate.jpg';
-import { Catalogo } from '../grade/gradecard/ProductContainer';
+import { Catalogo } from '../grade/ProductContainer';
 import styles from './Home.module.scss';
 
 export function Home() {

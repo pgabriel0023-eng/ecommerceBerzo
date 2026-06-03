@@ -1,0 +1,45 @@
+.container {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.inputBase {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  outline: none;
+
+  &:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--ring-color, #3b82f6);
+  }
+}
+
+.inputError {
+  border-color: #ef4444;
+
+  &:focus {
+    --ring-color: #f87171;
+  }
+}
+
+.inputSucess {
+  border-color: #d1d5db;
+
+  &:focus {
+    --ring-color: #60a5fa;
+  }
+}
+
+.errorMessage {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
